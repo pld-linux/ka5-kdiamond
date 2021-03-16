@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kdiamond
 Summary:	kdiamond
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	215069454ac356a1c067323002f8be8f
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	402f85d217489112f02f0f1f152a0fdc
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -69,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/kdiamond.knsrc
 %attr(755,root,root) %{_bindir}/kdiamond
 %{_desktopdir}/org.kde.kdiamond.desktop
 %{_iconsdir}/hicolor/128x128/apps/kdiamond.png
@@ -85,3 +84,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/sounds/KDiamond-Stone-Swap.ogg
 %{_datadir}/sounds/KDiamond-Stone-Touch.ogg
 %{_datadir}/metainfo/org.kde.kdiamond.appdata.xml
+%{_datadir}/knsrcfiles/kdiamond.knsrc
