@@ -43,6 +43,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KDiamond is a single player puzzle game. The object of the game is to
 build lines of three similar diamonds.
 
+%description -l pl.UTF-8
+KDiamond to jednoosobowa gra logiczna. Celem gry jest zbudowanie linii
+z trzech podobnych diamentów.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
